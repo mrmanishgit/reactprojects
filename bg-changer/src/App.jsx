@@ -1,22 +1,18 @@
-import { useState } from "react"
-import './App.css'
-function App ()
+import { useState } from "react";
+import './index.css'
+function App()
 {
-  const [background, setBackground] = useState('#000000')
+  const[background,setBackground]=useState('#ffffff')
   function change()
   {
-    console.log(Math.round(Math.random() * 10000000).toString(16))
-    const random_color = "#" + Math.round(Math.random() * 10000000).toString(16);
-    console.log(random_color)
-    background = random_color
-    console.log(background)
-    setBackground(random_color)
+     const random_color="#"+Math.round(Math.random()*10000000).toString(16);
+     setBackground(random_color)
   }
- 
-  return (
-    <div className="changer" style={{backgroundColor:background}}>
-      <button onClick={change}>change</button>
-    </div>  
+
+  return(
+    <div  className="changer" style={{backgroundColor:background}}>
+      <button onClick={change}>changer</button>
+    </div>
   )
 }
 export default App
